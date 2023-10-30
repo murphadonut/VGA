@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "h_sync",
+					"strict" : false
+				},
+				{
+					"name" : "h_disp",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[0]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[2]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[3]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[4]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[5]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[6]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[7]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[8]",
+					"strict" : false
+				},
+				{
+					"name" : "h_count[9]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50MHz",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
