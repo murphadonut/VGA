@@ -2,212 +2,308 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -7.033
-TNS   : -141.614
-
-Type  : Slow 1100mV 85C Model Setup 'vga_control:controller|h_count[0]'
-Slack : -6.102
-TNS   : -6.102
+Type  : Slow 1100mV 85C Model Setup 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -7.575
+TNS   : -7.575
 
 Type  : Slow 1100mV 85C Model Setup 'vga_control:controller|v_count[0]'
-Slack : -4.713
-TNS   : -4.713
+Slack : -6.754
+TNS   : -6.754
 
-Type  : Slow 1100mV 85C Model Hold 'vga_control:controller|v_count[0]'
-Slack : 0.414
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'clk_50MHz'
+Slack : -5.833
+TNS   : -206.923
 
-Type  : Slow 1100mV 85C Model Hold 'vga_control:controller|h_count[0]'
-Slack : 0.566
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'vga_control:controller|h_count[0]'
+Slack : -5.829
+TNS   : -5.829
+
+Type  : Slow 1100mV 85C Model Setup 'tbird_fsm:tb|slow_clk'
+Slack : -3.191
+TNS   : -28.500
 
 Type  : Slow 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.668
+Slack : -3.226
+TNS   : -77.834
+
+Type  : Slow 1100mV 85C Model Hold 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.273
+TNS   : -0.273
+
+Type  : Slow 1100mV 85C Model Hold 'vga_control:controller|h_count[0]'
+Slack : 1.343
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'vga_control:controller|h_count[0]'
-Slack : -6.124
-TNS   : -6.124
+Type  : Slow 1100mV 85C Model Hold 'vga_control:controller|v_count[0]'
+Slack : 1.361
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'tbird_fsm:tb|slow_clk'
+Slack : 1.785
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'vga_control:controller|v_count[0]'
-Slack : -4.546
-TNS   : -4.546
+Slack : -5.640
+TNS   : -5.640
 
-Type  : Slow 1100mV 85C Model Removal 'vga_control:controller|v_count[0]'
-Slack : 0.537
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Recovery 'vga_control:controller|h_count[0]'
+Slack : -4.577
+TNS   : -4.577
 
 Type  : Slow 1100mV 85C Model Removal 'vga_control:controller|h_count[0]'
-Slack : 0.589
+Slack : 1.012
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Removal 'vga_control:controller|v_count[0]'
+Slack : 1.335
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -1.290
+TNS   : -6.984
+
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
+Slack : -0.397
+TNS   : -33.158
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'tbird_fsm:tb|slow_clk'
 Slack : -0.394
-TNS   : -11.118
+TNS   : -6.821
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_control:controller|h_count[0]'
-Slack : 0.166
+Slack : 0.335
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_control:controller|v_count[0]'
-Slack : 0.448
+Slack : 0.388
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -6.727
-TNS   : -135.688
-
-Type  : Slow 1100mV 0C Model Setup 'vga_control:controller|h_count[0]'
-Slack : -6.230
-TNS   : -6.230
+Type  : Slow 1100mV 0C Model Setup 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -7.710
+TNS   : -7.710
 
 Type  : Slow 1100mV 0C Model Setup 'vga_control:controller|v_count[0]'
-Slack : -4.755
-TNS   : -4.755
+Slack : -6.786
+TNS   : -6.786
 
-Type  : Slow 1100mV 0C Model Hold 'vga_control:controller|v_count[0]'
-Slack : 0.421
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'vga_control:controller|h_count[0]'
+Slack : -5.860
+TNS   : -5.860
+
+Type  : Slow 1100mV 0C Model Setup 'clk_50MHz'
+Slack : -5.454
+TNS   : -199.960
+
+Type  : Slow 1100mV 0C Model Setup 'tbird_fsm:tb|slow_clk'
+Slack : -3.328
+TNS   : -30.015
 
 Type  : Slow 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.590
-TNS   : 0.000
+Slack : -3.312
+TNS   : -80.087
+
+Type  : Slow 1100mV 0C Model Hold 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.300
+TNS   : -0.300
 
 Type  : Slow 1100mV 0C Model Hold 'vga_control:controller|h_count[0]'
-Slack : 0.668
+Slack : 1.325
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'vga_control:controller|h_count[0]'
-Slack : -6.185
-TNS   : -6.185
+Type  : Slow 1100mV 0C Model Hold 'vga_control:controller|v_count[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'tbird_fsm:tb|slow_clk'
+Slack : 1.957
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'vga_control:controller|v_count[0]'
-Slack : -4.564
-TNS   : -4.564
+Slack : -5.786
+TNS   : -5.786
 
-Type  : Slow 1100mV 0C Model Removal 'vga_control:controller|v_count[0]'
-Slack : 0.493
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Recovery 'vga_control:controller|h_count[0]'
+Slack : -4.685
+TNS   : -4.685
 
 Type  : Slow 1100mV 0C Model Removal 'vga_control:controller|h_count[0]'
-Slack : 0.642
+Slack : 1.039
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'vga_control:controller|v_count[0]'
+Slack : 1.331
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -1.265
+TNS   : -6.963
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
 Slack : -0.394
-TNS   : -12.057
+TNS   : -35.529
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'tbird_fsm:tb|slow_clk'
+Slack : -0.394
+TNS   : -6.719
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_control:controller|h_count[0]'
-Slack : 0.188
+Slack : 0.376
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_control:controller|v_count[0]'
-Slack : 0.465
+Slack : 0.396
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -4.261
-TNS   : -85.037
-
-Type  : Fast 1100mV 85C Model Setup 'vga_control:controller|h_count[0]'
-Slack : -2.954
-TNS   : -2.954
+Type  : Fast 1100mV 85C Model Setup 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -4.034
+TNS   : -4.034
 
 Type  : Fast 1100mV 85C Model Setup 'vga_control:controller|v_count[0]'
-Slack : -2.182
-TNS   : -2.182
+Slack : -3.566
+TNS   : -3.566
 
-Type  : Fast 1100mV 85C Model Hold 'vga_control:controller|v_count[0]'
-Slack : 0.263
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'clk_50MHz'
+Slack : -3.513
+TNS   : -103.884
+
+Type  : Fast 1100mV 85C Model Setup 'vga_control:controller|h_count[0]'
+Slack : -3.007
+TNS   : -3.007
+
+Type  : Fast 1100mV 85C Model Setup 'tbird_fsm:tb|slow_clk'
+Slack : -1.526
+TNS   : -13.075
 
 Type  : Fast 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.299
+Slack : -1.909
+TNS   : -44.608
+
+Type  : Fast 1100mV 85C Model Hold 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.248
+TNS   : -0.248
+
+Type  : Fast 1100mV 85C Model Hold 'tbird_fsm:tb|slow_clk'
+Slack : 0.782
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'vga_control:controller|h_count[0]'
-Slack : 0.390
+Slack : 0.981
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'vga_control:controller|h_count[0]'
-Slack : -3.090
-TNS   : -3.090
+Type  : Fast 1100mV 85C Model Hold 'vga_control:controller|v_count[0]'
+Slack : 1.014
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'vga_control:controller|v_count[0]'
-Slack : -2.066
-TNS   : -2.066
+Slack : -2.722
+TNS   : -2.722
 
-Type  : Fast 1100mV 85C Model Removal 'vga_control:controller|v_count[0]'
-Slack : 0.385
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Recovery 'vga_control:controller|h_count[0]'
+Slack : -2.057
+TNS   : -2.057
 
 Type  : Fast 1100mV 85C Model Removal 'vga_control:controller|h_count[0]'
-Slack : 0.490
+Slack : 0.607
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Removal 'vga_control:controller|v_count[0]'
+Slack : 0.803
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.591
+TNS   : -2.834
+
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.084
-TNS   : -1.706
+Slack : -0.383
+TNS   : -5.936
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'tbird_fsm:tb|slow_clk'
+Slack : -0.064
+TNS   : -0.525
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_control:controller|h_count[0]'
-Slack : 0.299
+Slack : 0.364
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_control:controller|v_count[0]'
-Slack : 0.433
+Slack : 0.442
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -3.642
-TNS   : -72.613
-
-Type  : Fast 1100mV 0C Model Setup 'vga_control:controller|h_count[0]'
-Slack : -2.788
-TNS   : -2.788
+Type  : Fast 1100mV 0C Model Setup 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -3.692
+TNS   : -3.692
 
 Type  : Fast 1100mV 0C Model Setup 'vga_control:controller|v_count[0]'
-Slack : -2.058
-TNS   : -2.058
+Slack : -3.297
+TNS   : -3.297
 
-Type  : Fast 1100mV 0C Model Hold 'vga_control:controller|v_count[0]'
-Slack : 0.241
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'clk_50MHz'
+Slack : -2.924
+TNS   : -88.337
+
+Type  : Fast 1100mV 0C Model Setup 'vga_control:controller|h_count[0]'
+Slack : -2.780
+TNS   : -2.780
+
+Type  : Fast 1100mV 0C Model Setup 'tbird_fsm:tb|slow_clk'
+Slack : -1.502
+TNS   : -13.092
 
 Type  : Fast 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.293
+Slack : -1.912
+TNS   : -45.078
+
+Type  : Fast 1100mV 0C Model Hold 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.225
+TNS   : -0.225
+
+Type  : Fast 1100mV 0C Model Hold 'tbird_fsm:tb|slow_clk'
+Slack : 0.827
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'vga_control:controller|h_count[0]'
-Slack : 0.380
+Slack : 0.871
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'vga_control:controller|h_count[0]'
-Slack : -2.881
-TNS   : -2.881
+Type  : Fast 1100mV 0C Model Hold 'vga_control:controller|v_count[0]'
+Slack : 0.899
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'vga_control:controller|v_count[0]'
-Slack : -1.951
-TNS   : -1.951
+Slack : -2.578
+TNS   : -2.578
 
-Type  : Fast 1100mV 0C Model Removal 'vga_control:controller|v_count[0]'
-Slack : 0.337
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Recovery 'vga_control:controller|h_count[0]'
+Slack : -1.954
+TNS   : -1.954
 
 Type  : Fast 1100mV 0C Model Removal 'vga_control:controller|h_count[0]'
-Slack : 0.450
+Slack : 0.553
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Removal 'vga_control:controller|v_count[0]'
+Slack : 0.711
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'tbird_fsm:tb|flip_flop:ff|q[0]'
+Slack : -0.476
+TNS   : -2.170
+
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.085
-TNS   : -1.712
+Slack : -0.370
+TNS   : -5.860
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'tbird_fsm:tb|slow_clk'
+Slack : -0.020
+TNS   : -0.115
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_control:controller|h_count[0]'
-Slack : 0.326
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_control:controller|v_count[0]'
-Slack : 0.452
+Slack : 0.442
 TNS   : 0.000
 
 ------------------------------------------------------------

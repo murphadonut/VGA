@@ -1,5 +1,5 @@
 Timing Analyzer report for vga
-Mon Oct 30 20:06:19 2023
+Mon Oct 30 21:00:37 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,54 +9,55 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow 1100mV 85C Model Fmax Summary
-  6. Timing Closure Recommendations
-  7. Slow 1100mV 85C Model Setup Summary
-  8. Slow 1100mV 85C Model Hold Summary
-  9. Slow 1100mV 85C Model Recovery Summary
- 10. Slow 1100mV 85C Model Removal Summary
- 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Metastability Summary
- 13. Slow 1100mV 0C Model Fmax Summary
- 14. Slow 1100mV 0C Model Setup Summary
- 15. Slow 1100mV 0C Model Hold Summary
- 16. Slow 1100mV 0C Model Recovery Summary
- 17. Slow 1100mV 0C Model Removal Summary
- 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1100mV 0C Model Metastability Summary
- 20. Fast 1100mV 85C Model Setup Summary
- 21. Fast 1100mV 85C Model Hold Summary
- 22. Fast 1100mV 85C Model Recovery Summary
- 23. Fast 1100mV 85C Model Removal Summary
- 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 25. Fast 1100mV 85C Model Metastability Summary
- 26. Fast 1100mV 0C Model Setup Summary
- 27. Fast 1100mV 0C Model Hold Summary
- 28. Fast 1100mV 0C Model Recovery Summary
- 29. Fast 1100mV 0C Model Removal Summary
- 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 31. Fast 1100mV 0C Model Metastability Summary
- 32. Multicorner Timing Analysis Summary
- 33. Board Trace Model Assignments
- 34. Input Transition Times
- 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 39. Setup Transfers
- 40. Hold Transfers
- 41. Recovery Transfers
- 42. Removal Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths Summary
- 46. Clock Status Summary
- 47. Unconstrained Input Ports
- 48. Unconstrained Output Ports
- 49. Unconstrained Input Ports
- 50. Unconstrained Output Ports
- 51. Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 85C Model Setup Summary
+  9. Slow 1100mV 85C Model Hold Summary
+ 10. Slow 1100mV 85C Model Recovery Summary
+ 11. Slow 1100mV 85C Model Removal Summary
+ 12. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1100mV 85C Model Metastability Summary
+ 14. Slow 1100mV 0C Model Fmax Summary
+ 15. Slow 1100mV 0C Model Setup Summary
+ 16. Slow 1100mV 0C Model Hold Summary
+ 17. Slow 1100mV 0C Model Recovery Summary
+ 18. Slow 1100mV 0C Model Removal Summary
+ 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1100mV 0C Model Metastability Summary
+ 21. Fast 1100mV 85C Model Setup Summary
+ 22. Fast 1100mV 85C Model Hold Summary
+ 23. Fast 1100mV 85C Model Recovery Summary
+ 24. Fast 1100mV 85C Model Removal Summary
+ 25. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 26. Fast 1100mV 85C Model Metastability Summary
+ 27. Fast 1100mV 0C Model Setup Summary
+ 28. Fast 1100mV 0C Model Hold Summary
+ 29. Fast 1100mV 0C Model Recovery Summary
+ 30. Fast 1100mV 0C Model Removal Summary
+ 31. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 32. Fast 1100mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 39. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 40. Setup Transfers
+ 41. Hold Transfers
+ 42. Recovery Transfers
+ 43. Removal Transfers
+ 44. Report TCCS
+ 45. Report RSKM
+ 46. Unconstrained Paths Summary
+ 47. Clock Status Summary
+ 48. Unconstrained Input Ports
+ 49. Unconstrained Output Ports
+ 50. Unconstrained Input Ports
+ 51. Unconstrained Output Ports
+ 52. Timing Analyzer Messages
 
 
 
@@ -101,15 +102,24 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.2%      ;
+;     Processor 2            ;   4.9%      ;
+;     Processor 3            ;   4.8%      ;
+;     Processor 4            ;   4.7%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; tbird_fsm.sdc ; OK     ; Mon Oct 30 21:00:34 2023 ;
++---------------+--------+--------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -118,6 +128,8 @@ refer to the applicable agreement for further details.
 ; Clock Name                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                               ;
 +-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
 ; clk_50MHz                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50MHz }                         ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { tbird_fsm:tb|flip_flop:ff|q[0] }    ;
+; tbird_fsm:tb|slow_clk             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { tbird_fsm:tb|slow_clk }             ;
 ; vga_control:controller|h_count[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { vga_control:controller|h_count[0] } ;
 ; vga_control:controller|v_count[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { vga_control:controller|v_count[0] } ;
 +-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
@@ -128,9 +140,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                        ; Note ;
 +------------+-----------------+-----------------------------------+------+
-; 124.49 MHz ; 124.49 MHz      ; clk_50MHz                         ;      ;
-; 213.49 MHz ; 213.49 MHz      ; vga_control:controller|h_count[0] ;      ;
-; 302.85 MHz ; 302.85 MHz      ; vga_control:controller|v_count[0] ;      ;
+; 107.69 MHz ; 107.69 MHz      ; tbird_fsm:tb|flip_flop:ff|q[0]    ;      ;
+; 171.61 MHz ; 171.61 MHz      ; clk_50MHz                         ;      ;
+; 172.59 MHz ; 172.59 MHz      ; vga_control:controller|h_count[0] ;      ;
+; 180.25 MHz ; 180.25 MHz      ; vga_control:controller|v_count[0] ;      ;
 +------------+-----------------+-----------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,21 +159,25 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -7.033 ; -141.614      ;
-; vga_control:controller|h_count[0] ; -6.102 ; -6.102        ;
-; vga_control:controller|v_count[0] ; -4.713 ; -4.713        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -7.575 ; -7.575        ;
+; vga_control:controller|v_count[0] ; -6.754 ; -6.754        ;
+; clk_50MHz                         ; -5.833 ; -206.923      ;
+; vga_control:controller|h_count[0] ; -5.829 ; -5.829        ;
+; tbird_fsm:tb|slow_clk             ; -3.191 ; -28.500       ;
 +-----------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                        ;
-+-----------------------------------+-------+---------------+
-; Clock                             ; Slack ; End Point TNS ;
-+-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.414 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.566 ; 0.000         ;
-; clk_50MHz                         ; 0.668 ; 0.000         ;
-+-----------------------------------+-------+---------------+
++------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                         ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50MHz                         ; -3.226 ; -77.834       ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.273 ; -0.273        ;
+; vga_control:controller|h_count[0] ; 1.343  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 1.361  ; 0.000         ;
+; tbird_fsm:tb|slow_clk             ; 1.785  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------+
@@ -168,8 +185,8 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; vga_control:controller|h_count[0] ; -6.124 ; -6.124        ;
-; vga_control:controller|v_count[0] ; -4.546 ; -4.546        ;
+; vga_control:controller|v_count[0] ; -5.640 ; -5.640        ;
+; vga_control:controller|h_count[0] ; -4.577 ; -4.577        ;
 +-----------------------------------+--------+---------------+
 
 
@@ -178,8 +195,8 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------+-------+---------------+
 ; Clock                             ; Slack ; End Point TNS ;
 +-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.537 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.589 ; 0.000         ;
+; vga_control:controller|h_count[0] ; 1.012 ; 0.000         ;
+; vga_control:controller|v_count[0] ; 1.335 ; 0.000         ;
 +-----------------------------------+-------+---------------+
 
 
@@ -188,9 +205,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -0.394 ; -11.118       ;
-; vga_control:controller|h_count[0] ; 0.166  ; 0.000         ;
-; vga_control:controller|v_count[0] ; 0.448  ; 0.000         ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -1.290 ; -6.984        ;
+; clk_50MHz                         ; -0.397 ; -33.158       ;
+; tbird_fsm:tb|slow_clk             ; -0.394 ; -6.821        ;
+; vga_control:controller|h_count[0] ; 0.335  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.388  ; 0.000         ;
 +-----------------------------------+--------+---------------+
 
 
@@ -205,9 +224,10 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                        ; Note ;
 +------------+-----------------+-----------------------------------+------+
-; 129.42 MHz ; 129.42 MHz      ; clk_50MHz                         ;      ;
-; 211.24 MHz ; 211.24 MHz      ; vga_control:controller|h_count[0] ;      ;
-; 306.18 MHz ; 306.18 MHz      ; vga_control:controller|v_count[0] ;      ;
+; 108.53 MHz ; 108.53 MHz      ; tbird_fsm:tb|flip_flop:ff|q[0]    ;      ;
+; 169.06 MHz ; 169.06 MHz      ; clk_50MHz                         ;      ;
+; 181.36 MHz ; 181.36 MHz      ; vga_control:controller|h_count[0] ;      ;
+; 185.05 MHz ; 185.05 MHz      ; vga_control:controller|v_count[0] ;      ;
 +------------+-----------------+-----------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -217,21 +237,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -6.727 ; -135.688      ;
-; vga_control:controller|h_count[0] ; -6.230 ; -6.230        ;
-; vga_control:controller|v_count[0] ; -4.755 ; -4.755        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -7.710 ; -7.710        ;
+; vga_control:controller|v_count[0] ; -6.786 ; -6.786        ;
+; vga_control:controller|h_count[0] ; -5.860 ; -5.860        ;
+; clk_50MHz                         ; -5.454 ; -199.960      ;
+; tbird_fsm:tb|slow_clk             ; -3.328 ; -30.015       ;
 +-----------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                         ;
-+-----------------------------------+-------+---------------+
-; Clock                             ; Slack ; End Point TNS ;
-+-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.421 ; 0.000         ;
-; clk_50MHz                         ; 0.590 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.668 ; 0.000         ;
-+-----------------------------------+-------+---------------+
++------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                          ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50MHz                         ; -3.312 ; -80.087       ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.300 ; -0.300        ;
+; vga_control:controller|h_count[0] ; 1.325  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 1.333  ; 0.000         ;
+; tbird_fsm:tb|slow_clk             ; 1.957  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------+
@@ -239,8 +263,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; vga_control:controller|h_count[0] ; -6.185 ; -6.185        ;
-; vga_control:controller|v_count[0] ; -4.564 ; -4.564        ;
+; vga_control:controller|v_count[0] ; -5.786 ; -5.786        ;
+; vga_control:controller|h_count[0] ; -4.685 ; -4.685        ;
 +-----------------------------------+--------+---------------+
 
 
@@ -249,8 +273,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------+-------+---------------+
 ; Clock                             ; Slack ; End Point TNS ;
 +-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.493 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.642 ; 0.000         ;
+; vga_control:controller|h_count[0] ; 1.039 ; 0.000         ;
+; vga_control:controller|v_count[0] ; 1.331 ; 0.000         ;
 +-----------------------------------+-------+---------------+
 
 
@@ -259,9 +283,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -0.394 ; -12.057       ;
-; vga_control:controller|h_count[0] ; 0.188  ; 0.000         ;
-; vga_control:controller|v_count[0] ; 0.465  ; 0.000         ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -1.265 ; -6.963        ;
+; clk_50MHz                         ; -0.394 ; -35.529       ;
+; tbird_fsm:tb|slow_clk             ; -0.394 ; -6.719        ;
+; vga_control:controller|h_count[0] ; 0.376  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.396  ; 0.000         ;
 +-----------------------------------+--------+---------------+
 
 
@@ -276,21 +302,25 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -4.261 ; -85.037       ;
-; vga_control:controller|h_count[0] ; -2.954 ; -2.954        ;
-; vga_control:controller|v_count[0] ; -2.182 ; -2.182        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -4.034 ; -4.034        ;
+; vga_control:controller|v_count[0] ; -3.566 ; -3.566        ;
+; clk_50MHz                         ; -3.513 ; -103.884      ;
+; vga_control:controller|h_count[0] ; -3.007 ; -3.007        ;
+; tbird_fsm:tb|slow_clk             ; -1.526 ; -13.075       ;
 +-----------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                        ;
-+-----------------------------------+-------+---------------+
-; Clock                             ; Slack ; End Point TNS ;
-+-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.263 ; 0.000         ;
-; clk_50MHz                         ; 0.299 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.390 ; 0.000         ;
-+-----------------------------------+-------+---------------+
++------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                         ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50MHz                         ; -1.909 ; -44.608       ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.248 ; -0.248        ;
+; tbird_fsm:tb|slow_clk             ; 0.782  ; 0.000         ;
+; vga_control:controller|h_count[0] ; 0.981  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 1.014  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------+
@@ -298,8 +328,8 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; vga_control:controller|h_count[0] ; -3.090 ; -3.090        ;
-; vga_control:controller|v_count[0] ; -2.066 ; -2.066        ;
+; vga_control:controller|v_count[0] ; -2.722 ; -2.722        ;
+; vga_control:controller|h_count[0] ; -2.057 ; -2.057        ;
 +-----------------------------------+--------+---------------+
 
 
@@ -308,8 +338,8 @@ No synchronizer chains to report.
 +-----------------------------------+-------+---------------+
 ; Clock                             ; Slack ; End Point TNS ;
 +-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.385 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.490 ; 0.000         ;
+; vga_control:controller|h_count[0] ; 0.607 ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.803 ; 0.000         ;
 +-----------------------------------+-------+---------------+
 
 
@@ -318,9 +348,11 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -0.084 ; -1.706        ;
-; vga_control:controller|h_count[0] ; 0.299  ; 0.000         ;
-; vga_control:controller|v_count[0] ; 0.433  ; 0.000         ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.591 ; -2.834        ;
+; clk_50MHz                         ; -0.383 ; -5.936        ;
+; tbird_fsm:tb|slow_clk             ; -0.064 ; -0.525        ;
+; vga_control:controller|h_count[0] ; 0.364  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.442  ; 0.000         ;
 +-----------------------------------+--------+---------------+
 
 
@@ -335,21 +367,25 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -3.642 ; -72.613       ;
-; vga_control:controller|h_count[0] ; -2.788 ; -2.788        ;
-; vga_control:controller|v_count[0] ; -2.058 ; -2.058        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -3.692 ; -3.692        ;
+; vga_control:controller|v_count[0] ; -3.297 ; -3.297        ;
+; clk_50MHz                         ; -2.924 ; -88.337       ;
+; vga_control:controller|h_count[0] ; -2.780 ; -2.780        ;
+; tbird_fsm:tb|slow_clk             ; -1.502 ; -13.092       ;
 +-----------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                         ;
-+-----------------------------------+-------+---------------+
-; Clock                             ; Slack ; End Point TNS ;
-+-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.241 ; 0.000         ;
-; clk_50MHz                         ; 0.293 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.380 ; 0.000         ;
-+-----------------------------------+-------+---------------+
++------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                          ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50MHz                         ; -1.912 ; -45.078       ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.225 ; -0.225        ;
+; tbird_fsm:tb|slow_clk             ; 0.827  ; 0.000         ;
+; vga_control:controller|h_count[0] ; 0.871  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.899  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------+
@@ -357,8 +393,8 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; vga_control:controller|h_count[0] ; -2.881 ; -2.881        ;
-; vga_control:controller|v_count[0] ; -1.951 ; -1.951        ;
+; vga_control:controller|v_count[0] ; -2.578 ; -2.578        ;
+; vga_control:controller|h_count[0] ; -1.954 ; -1.954        ;
 +-----------------------------------+--------+---------------+
 
 
@@ -367,8 +403,8 @@ No synchronizer chains to report.
 +-----------------------------------+-------+---------------+
 ; Clock                             ; Slack ; End Point TNS ;
 +-----------------------------------+-------+---------------+
-; vga_control:controller|v_count[0] ; 0.337 ; 0.000         ;
-; vga_control:controller|h_count[0] ; 0.450 ; 0.000         ;
+; vga_control:controller|h_count[0] ; 0.553 ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.711 ; 0.000         ;
 +-----------------------------------+-------+---------------+
 
 
@@ -377,9 +413,11 @@ No synchronizer chains to report.
 +-----------------------------------+--------+---------------+
 ; Clock                             ; Slack  ; End Point TNS ;
 +-----------------------------------+--------+---------------+
-; clk_50MHz                         ; -0.085 ; -1.712        ;
-; vga_control:controller|h_count[0] ; 0.326  ; 0.000         ;
-; vga_control:controller|v_count[0] ; 0.452  ; 0.000         ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; -0.476 ; -2.170        ;
+; clk_50MHz                         ; -0.370 ; -5.860        ;
+; tbird_fsm:tb|slow_clk             ; -0.020 ; -0.115        ;
+; vga_control:controller|h_count[0] ; 0.391  ; 0.000         ;
+; vga_control:controller|v_count[0] ; 0.442  ; 0.000         ;
 +-----------------------------------+--------+---------------+
 
 
@@ -389,20 +427,24 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                              ;
-+------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                              ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                   ; -7.033   ; 0.241 ; -6.185   ; 0.337   ; -0.394              ;
-;  clk_50MHz                         ; -7.033   ; 0.293 ; N/A      ; N/A     ; -0.394              ;
-;  vga_control:controller|h_count[0] ; -6.230   ; 0.380 ; -6.185   ; 0.450   ; 0.166               ;
-;  vga_control:controller|v_count[0] ; -4.755   ; 0.241 ; -4.564   ; 0.337   ; 0.433               ;
-; Design-wide TNS                    ; -152.429 ; 0.0   ; -10.749  ; 0.0     ; -12.057             ;
-;  clk_50MHz                         ; -141.614 ; 0.000 ; N/A      ; N/A     ; -12.057             ;
-;  vga_control:controller|h_count[0] ; -6.230   ; 0.000 ; -6.185   ; 0.000   ; 0.000               ;
-;  vga_control:controller|v_count[0] ; -4.755   ; 0.000 ; -4.564   ; 0.000   ; 0.000               ;
-+------------------------------------+----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                ;
++------------------------------------+----------+---------+----------+---------+---------------------+
+; Clock                              ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------+----------+---------+----------+---------+---------------------+
+; Worst-case Slack                   ; -7.710   ; -3.312  ; -5.786   ; 0.553   ; -1.290              ;
+;  clk_50MHz                         ; -5.833   ; -3.312  ; N/A      ; N/A     ; -0.397              ;
+;  tbird_fsm:tb|flip_flop:ff|q[0]    ; -7.710   ; -0.300  ; N/A      ; N/A     ; -1.290              ;
+;  tbird_fsm:tb|slow_clk             ; -3.328   ; 0.782   ; N/A      ; N/A     ; -0.394              ;
+;  vga_control:controller|h_count[0] ; -5.860   ; 0.871   ; -4.685   ; 0.553   ; 0.335               ;
+;  vga_control:controller|v_count[0] ; -6.786   ; 0.899   ; -5.786   ; 0.711   ; 0.388               ;
+; Design-wide TNS                    ; -255.581 ; -80.387 ; -10.471  ; 0.0     ; -49.211             ;
+;  clk_50MHz                         ; -206.923 ; -80.087 ; N/A      ; N/A     ; -35.529             ;
+;  tbird_fsm:tb|flip_flop:ff|q[0]    ; -7.710   ; -0.300  ; N/A      ; N/A     ; -6.984              ;
+;  tbird_fsm:tb|slow_clk             ; -30.015  ; 0.000   ; N/A      ; N/A     ; -6.821              ;
+;  vga_control:controller|h_count[0] ; -5.860   ; 0.000   ; -4.685   ; 0.000   ; 0.000               ;
+;  vga_control:controller|v_count[0] ; -6.786   ; 0.000   ; -5.786   ; 0.000   ; 0.000               ;
++------------------------------------+----------+---------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -442,17 +484,17 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+-----------------------------------------------------------------+
-; Input Transition Times                                          ;
-+--------------+--------------+-----------------+-----------------+
-; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+--------------+--------------+-----------------+-----------------+
-; red_switch   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; green_switch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; blue_switch  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clk_50MHz    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clear        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+--------------+--------------+-----------------+-----------------+
++------------------------------------------------------------------+
+; Input Transition Times                                           ;
++---------------+--------------+-----------------+-----------------+
+; Pin           ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++---------------+--------------+-----------------+-----------------+
+; clk_50MHz     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clear         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hazard_button ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; left_button   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; right_button  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++---------------+--------------+-----------------+-----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -463,8 +505,8 @@ No synchronizer chains to report.
 ; clk_25MHz    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; h_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; v_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; red_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; red_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; red_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
@@ -500,8 +542,8 @@ No synchronizer chains to report.
 ; clk_25MHz    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; h_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; v_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; red_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; red_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; red_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
@@ -537,8 +579,8 @@ No synchronizer chains to report.
 ; clk_25MHz    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; h_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; v_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; red_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; red_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; red_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
@@ -574,8 +616,8 @@ No synchronizer chains to report.
 ; clk_25MHz    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; h_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; v_sync       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; sync_n       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; blank_n      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; red_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; red_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; red_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -608,9 +650,17 @@ No synchronizer chains to report.
 +-----------------------------------+-----------------------------------+----------+----------+----------+----------+
 ; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------+-----------------------------------+----------+----------+----------+----------+
-; clk_50MHz                         ; clk_50MHz                         ; 381      ; 0        ; 0        ; 0        ;
+; clk_50MHz                         ; clk_50MHz                         ; 1605     ; 0        ; 0        ; 0        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; clk_50MHz                         ; 118      ; 118      ; 0        ; 0        ;
+; tbird_fsm:tb|slow_clk             ; clk_50MHz                         ; 1079     ; 1        ; 0        ; 0        ;
 ; vga_control:controller|h_count[0] ; clk_50MHz                         ; 30       ; 30       ; 0        ; 0        ;
 ; vga_control:controller|v_count[0] ; clk_50MHz                         ; 20       ; 20       ; 0        ; 0        ;
+; clk_50MHz                         ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 280      ; 0        ; 280      ; 0        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 22       ; 22       ; 22       ; 22       ;
+; tbird_fsm:tb|slow_clk             ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 198      ; 0        ; 198      ; 0        ;
+; vga_control:controller|h_count[0] ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 20       ; 20       ; 20       ; 20       ;
+; vga_control:controller|v_count[0] ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 4        ; 4        ; 4        ; 4        ;
+; clk_50MHz                         ; tbird_fsm:tb|slow_clk             ; 10       ; 0        ; 0        ; 0        ;
 ; clk_50MHz                         ; vga_control:controller|h_count[0] ; 9        ; 0        ; 0        ; 0        ;
 ; vga_control:controller|h_count[0] ; vga_control:controller|h_count[0] ; 1        ; 1        ; 0        ; 0        ;
 ; clk_50MHz                         ; vga_control:controller|v_count[0] ; 9        ; 0        ; 0        ; 0        ;
@@ -624,9 +674,17 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------+-----------------------------------+----------+----------+----------+----------+
 ; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------+-----------------------------------+----------+----------+----------+----------+
-; clk_50MHz                         ; clk_50MHz                         ; 381      ; 0        ; 0        ; 0        ;
+; clk_50MHz                         ; clk_50MHz                         ; 1605     ; 0        ; 0        ; 0        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; clk_50MHz                         ; 118      ; 118      ; 0        ; 0        ;
+; tbird_fsm:tb|slow_clk             ; clk_50MHz                         ; 1079     ; 1        ; 0        ; 0        ;
 ; vga_control:controller|h_count[0] ; clk_50MHz                         ; 30       ; 30       ; 0        ; 0        ;
 ; vga_control:controller|v_count[0] ; clk_50MHz                         ; 20       ; 20       ; 0        ; 0        ;
+; clk_50MHz                         ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 280      ; 0        ; 280      ; 0        ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 22       ; 22       ; 22       ; 22       ;
+; tbird_fsm:tb|slow_clk             ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 198      ; 0        ; 198      ; 0        ;
+; vga_control:controller|h_count[0] ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 20       ; 20       ; 20       ; 20       ;
+; vga_control:controller|v_count[0] ; tbird_fsm:tb|flip_flop:ff|q[0]    ; 4        ; 4        ; 4        ; 4        ;
+; clk_50MHz                         ; tbird_fsm:tb|slow_clk             ; 10       ; 0        ; 0        ; 0        ;
 ; clk_50MHz                         ; vga_control:controller|h_count[0] ; 9        ; 0        ; 0        ; 0        ;
 ; vga_control:controller|h_count[0] ; vga_control:controller|h_count[0] ; 1        ; 1        ; 0        ; 0        ;
 ; clk_50MHz                         ; vga_control:controller|v_count[0] ; 9        ; 0        ; 0        ; 0        ;
@@ -681,9 +739,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 45    ; 45   ;
-; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 77    ; 77   ;
+; Unconstrained Input Port Paths  ; 86    ; 86   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 13    ; 13   ;
 +---------------------------------+-------+------+
 
 
@@ -693,105 +751,75 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                            ; Clock                             ; Type ; Status      ;
 +-----------------------------------+-----------------------------------+------+-------------+
 ; clk_50MHz                         ; clk_50MHz                         ; Base ; Constrained ;
+; tbird_fsm:tb|flip_flop:ff|q[0]    ; tbird_fsm:tb|flip_flop:ff|q[0]    ; Base ; Constrained ;
+; tbird_fsm:tb|slow_clk             ; tbird_fsm:tb|slow_clk             ; Base ; Constrained ;
 ; vga_control:controller|h_count[0] ; vga_control:controller|h_count[0] ; Base ; Constrained ;
 ; vga_control:controller|v_count[0] ; vga_control:controller|v_count[0] ; Base ; Constrained ;
 +-----------------------------------+-----------------------------------+------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                           ;
-+--------------+--------------------------------------------------------------------------------------+
-; Input Port   ; Comment                                                                              ;
-+--------------+--------------------------------------------------------------------------------------+
-; blue_switch  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clear        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_switch ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_switch   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+--------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clk_25MHz    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; clear         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hazard_button ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; left_button   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; right_button  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                           ;
-+--------------+--------------------------------------------------------------------------------------+
-; Input Port   ; Comment                                                                              ;
-+--------------+--------------------------------------------------------------------------------------+
-; blue_switch  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clear        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_switch ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_switch   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+--------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; blank_n     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk_25MHz   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; blank_n      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; blue_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clk_25MHz    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; green_out[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; h_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; red_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; v_sync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; clear         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hazard_button ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; left_button   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; right_button  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; blank_n     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk_25MHz   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; h_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red_out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; v_sync      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -800,160 +828,189 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 30 20:06:16 2023
+    Info: Processing started: Mon Oct 30 21:00:33 2023
 Info: Command: quartus_sta vga -c vga
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'vga.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Info (332104): Reading SDC File: 'tbird_fsm.sdc'
+Warning (332174): Ignored filter at tbird_fsm.sdc(1): clk could not be matched with a port File: C:/Data/GIT/VGA/tbird_fsm.sdc Line: 1
+Warning (332049): Ignored create_clock at tbird_fsm.sdc(1): Argument <targets> is an empty collection File: C:/Data/GIT/VGA/tbird_fsm.sdc Line: 1
+    Info (332050): create_clock -name "clk" -period 20.000ns [get_ports {clk}] File: C:/Data/GIT/VGA/tbird_fsm.sdc Line: 1
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk_50MHz clk_50MHz
+    Info (332105): create_clock -period 1.000 -name tbird_fsm:tb|flip_flop:ff|q[0] tbird_fsm:tb|flip_flop:ff|q[0]
+    Info (332105): create_clock -period 1.000 -name tbird_fsm:tb|slow_clk tbird_fsm:tb|slow_clk
     Info (332105): create_clock -period 1.000 -name vga_control:controller|v_count[0] vga_control:controller|v_count[0]
     Info (332105): create_clock -period 1.000 -name vga_control:controller|h_count[0] vga_control:controller|h_count[0]
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.033
+Info (332146): Worst-case setup slack is -7.575
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.033            -141.614 clk_50MHz 
-    Info (332119):    -6.102              -6.102 vga_control:controller|h_count[0] 
-    Info (332119):    -4.713              -4.713 vga_control:controller|v_count[0] 
-Info (332146): Worst-case hold slack is 0.414
+    Info (332119):    -7.575              -7.575 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -6.754              -6.754 vga_control:controller|v_count[0] 
+    Info (332119):    -5.833            -206.923 clk_50MHz 
+    Info (332119):    -5.829              -5.829 vga_control:controller|h_count[0] 
+    Info (332119):    -3.191             -28.500 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case hold slack is -3.226
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.414               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.566               0.000 vga_control:controller|h_count[0] 
-    Info (332119):     0.668               0.000 clk_50MHz 
-Info (332146): Worst-case recovery slack is -6.124
+    Info (332119):    -3.226             -77.834 clk_50MHz 
+    Info (332119):    -0.273              -0.273 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):     1.343               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     1.361               0.000 vga_control:controller|v_count[0] 
+    Info (332119):     1.785               0.000 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case recovery slack is -5.640
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.124              -6.124 vga_control:controller|h_count[0] 
-    Info (332119):    -4.546              -4.546 vga_control:controller|v_count[0] 
-Info (332146): Worst-case removal slack is 0.537
+    Info (332119):    -5.640              -5.640 vga_control:controller|v_count[0] 
+    Info (332119):    -4.577              -4.577 vga_control:controller|h_count[0] 
+Info (332146): Worst-case removal slack is 1.012
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.537               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.589               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     1.012               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     1.335               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -1.290
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -11.118 clk_50MHz 
-    Info (332119):     0.166               0.000 vga_control:controller|h_count[0] 
-    Info (332119):     0.448               0.000 vga_control:controller|v_count[0] 
+    Info (332119):    -1.290              -6.984 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -0.397             -33.158 clk_50MHz 
+    Info (332119):    -0.394              -6.821 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.335               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.388               0.000 vga_control:controller|v_count[0] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.727
+Info (332146): Worst-case setup slack is -7.710
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.727            -135.688 clk_50MHz 
-    Info (332119):    -6.230              -6.230 vga_control:controller|h_count[0] 
-    Info (332119):    -4.755              -4.755 vga_control:controller|v_count[0] 
-Info (332146): Worst-case hold slack is 0.421
+    Info (332119):    -7.710              -7.710 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -6.786              -6.786 vga_control:controller|v_count[0] 
+    Info (332119):    -5.860              -5.860 vga_control:controller|h_count[0] 
+    Info (332119):    -5.454            -199.960 clk_50MHz 
+    Info (332119):    -3.328             -30.015 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case hold slack is -3.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.421               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.590               0.000 clk_50MHz 
-    Info (332119):     0.668               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case recovery slack is -6.185
+    Info (332119):    -3.312             -80.087 clk_50MHz 
+    Info (332119):    -0.300              -0.300 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):     1.325               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     1.333               0.000 vga_control:controller|v_count[0] 
+    Info (332119):     1.957               0.000 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case recovery slack is -5.786
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.185              -6.185 vga_control:controller|h_count[0] 
-    Info (332119):    -4.564              -4.564 vga_control:controller|v_count[0] 
-Info (332146): Worst-case removal slack is 0.493
+    Info (332119):    -5.786              -5.786 vga_control:controller|v_count[0] 
+    Info (332119):    -4.685              -4.685 vga_control:controller|h_count[0] 
+Info (332146): Worst-case removal slack is 1.039
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.493               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.642               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     1.039               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     1.331               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -1.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -12.057 clk_50MHz 
-    Info (332119):     0.188               0.000 vga_control:controller|h_count[0] 
-    Info (332119):     0.465               0.000 vga_control:controller|v_count[0] 
+    Info (332119):    -1.265              -6.963 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -0.394             -35.529 clk_50MHz 
+    Info (332119):    -0.394              -6.719 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.376               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.396               0.000 vga_control:controller|v_count[0] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.261
+Info (332146): Worst-case setup slack is -4.034
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.261             -85.037 clk_50MHz 
-    Info (332119):    -2.954              -2.954 vga_control:controller|h_count[0] 
-    Info (332119):    -2.182              -2.182 vga_control:controller|v_count[0] 
-Info (332146): Worst-case hold slack is 0.263
+    Info (332119):    -4.034              -4.034 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -3.566              -3.566 vga_control:controller|v_count[0] 
+    Info (332119):    -3.513            -103.884 clk_50MHz 
+    Info (332119):    -3.007              -3.007 vga_control:controller|h_count[0] 
+    Info (332119):    -1.526             -13.075 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case hold slack is -1.909
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.263               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.299               0.000 clk_50MHz 
-    Info (332119):     0.390               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case recovery slack is -3.090
+    Info (332119):    -1.909             -44.608 clk_50MHz 
+    Info (332119):    -0.248              -0.248 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):     0.782               0.000 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.981               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     1.014               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case recovery slack is -2.722
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.090              -3.090 vga_control:controller|h_count[0] 
-    Info (332119):    -2.066              -2.066 vga_control:controller|v_count[0] 
-Info (332146): Worst-case removal slack is 0.385
+    Info (332119):    -2.722              -2.722 vga_control:controller|v_count[0] 
+    Info (332119):    -2.057              -2.057 vga_control:controller|h_count[0] 
+Info (332146): Worst-case removal slack is 0.607
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.385               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.490               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.084
+    Info (332119):     0.607               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.803               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.591
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.084              -1.706 clk_50MHz 
-    Info (332119):     0.299               0.000 vga_control:controller|h_count[0] 
-    Info (332119):     0.433               0.000 vga_control:controller|v_count[0] 
+    Info (332119):    -0.591              -2.834 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -0.383              -5.936 clk_50MHz 
+    Info (332119):    -0.064              -0.525 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.364               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.442               0.000 vga_control:controller|v_count[0] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.642
+Info (332146): Worst-case setup slack is -3.692
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.642             -72.613 clk_50MHz 
-    Info (332119):    -2.788              -2.788 vga_control:controller|h_count[0] 
-    Info (332119):    -2.058              -2.058 vga_control:controller|v_count[0] 
-Info (332146): Worst-case hold slack is 0.241
+    Info (332119):    -3.692              -3.692 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -3.297              -3.297 vga_control:controller|v_count[0] 
+    Info (332119):    -2.924             -88.337 clk_50MHz 
+    Info (332119):    -2.780              -2.780 vga_control:controller|h_count[0] 
+    Info (332119):    -1.502             -13.092 tbird_fsm:tb|slow_clk 
+Info (332146): Worst-case hold slack is -1.912
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.241               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.293               0.000 clk_50MHz 
-    Info (332119):     0.380               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case recovery slack is -2.881
+    Info (332119):    -1.912             -45.078 clk_50MHz 
+    Info (332119):    -0.225              -0.225 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):     0.827               0.000 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.871               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.899               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case recovery slack is -2.578
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.881              -2.881 vga_control:controller|h_count[0] 
-    Info (332119):    -1.951              -1.951 vga_control:controller|v_count[0] 
-Info (332146): Worst-case removal slack is 0.337
+    Info (332119):    -2.578              -2.578 vga_control:controller|v_count[0] 
+    Info (332119):    -1.954              -1.954 vga_control:controller|h_count[0] 
+Info (332146): Worst-case removal slack is 0.553
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 vga_control:controller|v_count[0] 
-    Info (332119):     0.450               0.000 vga_control:controller|h_count[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.085
+    Info (332119):     0.553               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.711               0.000 vga_control:controller|v_count[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.476
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.085              -1.712 clk_50MHz 
-    Info (332119):     0.326               0.000 vga_control:controller|h_count[0] 
-    Info (332119):     0.452               0.000 vga_control:controller|v_count[0] 
+    Info (332119):    -0.476              -2.170 tbird_fsm:tb|flip_flop:ff|q[0] 
+    Info (332119):    -0.370              -5.860 clk_50MHz 
+    Info (332119):    -0.020              -0.115 tbird_fsm:tb|slow_clk 
+    Info (332119):     0.391               0.000 vga_control:controller|h_count[0] 
+    Info (332119):     0.442               0.000 vga_control:controller|v_count[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 5134 megabytes
-    Info: Processing ended: Mon Oct 30 20:06:19 2023
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Mon Oct 30 21:00:37 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

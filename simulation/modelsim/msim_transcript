@@ -11,31 +11,62 @@
 # Copying C:/Data/Piece_Of_Shit_2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Data/GIT/VGA {C:/Data/GIT/VGA/tbird_fsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:04:25 on Oct 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/VGA" C:/Data/GIT/VGA/tbird_fsm.v 
+# -- Compiling module tbird_fsm
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	tbird_fsm
+# End time: 21:04:25 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/VGA {C:/Data/GIT/VGA/vga_control.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:42 on Oct 30,2023
+# Start time: 21:04:25 on Oct 30,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/VGA" C:/Data/GIT/VGA/vga_control.v 
 # -- Compiling module vga_control
 # 
 # Top level modules:
 # 	vga_control
-# End time: 19:40:42 on Oct 30,2023, Elapsed time: 0:00:00
+# End time: 21:04:25 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/GIT/VGA {C:/Data/GIT/VGA/bit_gen2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:04:25 on Oct 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/VGA" C:/Data/GIT/VGA/bit_gen2.v 
+# -- Compiling module bit_gen2
+# 
+# Top level modules:
+# 	bit_gen2
+# End time: 21:04:25 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/GIT/VGA {C:/Data/GIT/VGA/vga_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:04:25 on Oct 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/VGA" C:/Data/GIT/VGA/vga_2.v 
+# -- Compiling module vga_2
+# 
+# Top level modules:
+# 	vga_2
+# End time: 21:04:25 on Oct 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Data/GIT/VGA {C:/Data/GIT/VGA/vga_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:42 on Oct 30,2023
+# Start time: 21:04:25 on Oct 30,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/GIT/VGA" C:/Data/GIT/VGA/vga_tb.v 
 # -- Compiling module vga_tb
 # 
 # Top level modules:
 # 	vga_tb
-# End time: 19:40:42 on Oct 30,2023, Elapsed time: 0:00:00
+# End time: 21:04:25 on Oct 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  vga_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" vga_tb 
-# Start time: 19:40:42 on Oct 30,2023
+# Start time: 21:04:25 on Oct 30,2023
 # Loading work.vga_tb
 # Loading work.vga_control
 # 
@@ -45,5 +76,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 20:12:51 on Oct 30,2023, Elapsed time: 0:32:09
+# End time: 21:08:52 on Oct 30,2023, Elapsed time: 0:04:27
 # Errors: 0, Warnings: 0

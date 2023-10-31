@@ -52,87 +52,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "green_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[4]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[6]",
-					"strict" : false
-				},
-				{
-					"name" : "green_out[7]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[4]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[6]",
-					"strict" : false
-				},
-				{
-					"name" : "blue_out[7]",
-					"strict" : false
-				},
-				{
-					"name" : "red_switch",
-					"strict" : false
-				},
-				{
-					"name" : "green_switch",
-					"strict" : false
-				},
-				{
-					"name" : "blue_switch",
-					"strict" : false
-				},
-				{
 					"name" : "clk_50MHz",
 					"strict" : false
 				},
 				{
 					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "hazard_button",
+					"strict" : false
+				},
+				{
+					"name" : "left_button",
+					"strict" : false
+				},
+				{
+					"name" : "right_button",
 					"strict" : false
 				}
 			]

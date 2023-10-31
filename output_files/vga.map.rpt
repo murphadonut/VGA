@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Mon Oct 30 20:05:45 2023
+Mon Oct 30 20:59:58 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,13 +14,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |vga
- 11. Parameter Settings for User Entity Instance: vga_control:controller
- 12. Parameter Settings for User Entity Instance: bit_gen:bits
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |vga_2
+ 14. Parameter Settings for User Entity Instance: vga_control:controller
+ 15. Parameter Settings for User Entity Instance: bit_gen2:bits
+ 16. Parameter Settings for User Entity Instance: tbird_fsm:tb
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,13 +51,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 30 20:05:45 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 30 20:59:58 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
-; Top-level Entity Name           ; vga                                         ;
+; Top-level Entity Name           ; vga_2                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 21                                          ;
+; Total registers                 ; 67                                          ;
 ; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -72,7 +77,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; vga                ; vga                ;
+; Top-level entity name                                                           ; vga_2              ; vga                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -175,63 +180,99 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path  ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------+---------+
-; vga.v                            ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/vga.v         ;         ;
-; bit_gen.v                        ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/bit_gen.v     ;         ;
+; tbird_fsm.v                      ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/tbird_fsm.v   ;         ;
 ; vga_control.v                    ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/vga_control.v ;         ;
+; bit_gen2.v                       ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/bit_gen2.v    ;         ;
+; vga_2.v                          ; yes             ; User Verilog HDL File  ; C:/Data/GIT/VGA/vga_2.v       ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 26              ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 45              ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 6               ;
-;     -- 5 input functions                    ; 7               ;
-;     -- 4 input functions                    ; 3               ;
-;     -- <=3 input functions                  ; 29              ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 21              ;
-;                                             ;                 ;
-; I/O pins                                    ; 34              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; clk_50MHz~input ;
-; Maximum fan-out                             ; 21              ;
-; Total fan-out                               ; 310             ;
-; Average fan-out                             ; 2.31            ;
-+---------------------------------------------+-----------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 96          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 150         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 40          ;
+;     -- 5 input functions                    ; 29          ;
+;     -- 4 input functions                    ; 15          ;
+;     -- <=3 input functions                  ; 66          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 67          ;
+;                                             ;             ;
+; I/O pins                                    ; 34          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clear~input ;
+; Maximum fan-out                             ; 67          ;
+; Total fan-out                               ; 903         ;
+; Average fan-out                             ; 3.17        ;
++---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
-; |vga                        ; 45 (0)              ; 21 (0)                    ; 0                 ; 0          ; 34   ; 0            ; |vga                        ; vga         ; work         ;
-;    |bit_gen:bits|           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|bit_gen:bits           ; bit_gen     ; work         ;
-;    |vga_control:controller| ; 42 (42)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vga_control:controller ; vga_control ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
+; |vga_2                      ; 150 (0)             ; 67 (0)                    ; 0                 ; 0          ; 34   ; 0            ; |vga_2                           ; vga_2       ; work         ;
+;    |bit_gen2:bits|          ; 61 (61)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_2|bit_gen2:bits             ; bit_gen2    ; work         ;
+;    |tbird_fsm:tb|           ; 46 (46)             ; 46 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_2|tbird_fsm:tb              ; tbird_fsm   ; work         ;
+;       |flip_flop:ff|        ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_2|tbird_fsm:tb|flip_flop:ff ; flip_flop   ; work         ;
+;    |vga_control:controller| ; 43 (43)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_2|vga_control:controller    ; vga_control ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                         ;
-+----------------------------------------------------+-------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal           ; Free of Timing Hazards ;
-+----------------------------------------------------+-------------------------------+------------------------+
-; vga_control:controller|h_sync                      ; vga_control:controller|h_sync ; yes                    ;
-; vga_control:controller|v_sync                      ; vga_control:controller|v_sync ; yes                    ;
-; vga_control:controller|v_bright                    ; GND                           ; yes                    ;
-; vga_control:controller|h_bright                    ; GND                           ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                               ;                        ;
-+----------------------------------------------------+-------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; vga_control:controller|h_sync                       ; vga_control:controller|h_sync ; yes                    ;
+; vga_control:controller|v_sync                       ; vga_control:controller|v_sync ; yes                    ;
+; vga_control:controller|v_bright                     ; GND                           ; yes                    ;
+; vga_control:controller|h_bright                     ; GND                           ; yes                    ;
+; bit_gen2:bits|red_out[0]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[1]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[2]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[3]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[4]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[5]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[6]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; bit_gen2:bits|red_out[7]                            ; bit_gen2:bits|WideNor0        ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++------------------------------------------+---------------------------------------------------+
+; Register name                            ; Reason for Removal                                ;
++------------------------------------------+---------------------------------------------------+
+; tbird_fsm:tb|flip_flop:ff|q[20]          ; Merged with tbird_fsm:tb|flip_flop:ff|q[19]       ;
+; tbird_fsm:tb|flip_flop:ff|q[17,18]       ; Merged with tbird_fsm:tb|flip_flop:ff|q[16]       ;
+; tbird_fsm:tb|flip_flop:ff|q[14,15]       ; Merged with tbird_fsm:tb|flip_flop:ff|q[13]       ;
+; tbird_fsm:tb|flip_flop:ff|q[12]          ; Merged with tbird_fsm:tb|flip_flop:ff|q[11]       ;
+; tbird_fsm:tb|flip_flop:ff|q[9]           ; Merged with tbird_fsm:tb|flip_flop:ff|q[10]       ;
+; tbird_fsm:tb|flip_flop:ff|q[7,8]         ; Merged with tbird_fsm:tb|flip_flop:ff|q[6]        ;
+; tbird_fsm:tb|unclocked_next_state[20]    ; Merged with tbird_fsm:tb|unclocked_next_state[19] ;
+; tbird_fsm:tb|unclocked_next_state[17,18] ; Merged with tbird_fsm:tb|unclocked_next_state[16] ;
+; tbird_fsm:tb|unclocked_next_state[14,15] ; Merged with tbird_fsm:tb|unclocked_next_state[13] ;
+; tbird_fsm:tb|unclocked_next_state[12]    ; Merged with tbird_fsm:tb|unclocked_next_state[11] ;
+; tbird_fsm:tb|unclocked_next_state[9]     ; Merged with tbird_fsm:tb|unclocked_next_state[10] ;
+; tbird_fsm:tb|unclocked_next_state[7,8]   ; Merged with tbird_fsm:tb|unclocked_next_state[6]  ;
+; tbird_fsm:tb|unclocked_next_state[4,5]   ; Merged with tbird_fsm:tb|unclocked_next_state[3]  ;
+; tbird_fsm:tb|unclocked_next_state[2]     ; Merged with tbird_fsm:tb|unclocked_next_state[1]  ;
+; tbird_fsm:tb|flip_flop:ff|q[4,5]         ; Merged with tbird_fsm:tb|flip_flop:ff|q[3]        ;
+; tbird_fsm:tb|flip_flop:ff|q[2]           ; Merged with tbird_fsm:tb|flip_flop:ff|q[1]        ;
+; Total Number of Removed Registers = 24   ;                                                   ;
++------------------------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -239,25 +280,63 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 67    ;
+; Number of registers using Synchronous Clear  ; 45    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Clear ; 67    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |vga ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; H_RES          ; 640   ; Signed Integer                             ;
-; V_RES          ; 480   ; Signed Integer                             ;
-; COUNTER_BITS   ; 10    ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; tbird_fsm:tb|flip_flop:ff|q[0]          ; 8       ;
+; tbird_fsm:tb|flip_flop:ff|q[6]          ; 8       ;
+; tbird_fsm:tb|flip_flop:ff|q[3]          ; 8       ;
+; tbird_fsm:tb|flip_flop:ff|q[1]          ; 8       ;
+; tbird_fsm:tb|flip_flop:ff|q[10]         ; 5       ;
+; tbird_fsm:tb|flip_flop:ff|q[21]         ; 6       ;
+; tbird_fsm:tb|flip_flop:ff|q[19]         ; 7       ;
+; tbird_fsm:tb|flip_flop:ff|q[16]         ; 6       ;
+; tbird_fsm:tb|flip_flop:ff|q[13]         ; 4       ;
+; tbird_fsm:tb|flip_flop:ff|q[11]         ; 5       ;
+; tbird_fsm:tb|unclocked_next_state[0]    ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[6]    ; 1       ;
+; tbird_fsm:tb|unclocked_next_state[3]    ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[1]    ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[10]   ; 1       ;
+; tbird_fsm:tb|unclocked_next_state[21]   ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[19]   ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[16]   ; 2       ;
+; tbird_fsm:tb|unclocked_next_state[13]   ; 1       ;
+; tbird_fsm:tb|unclocked_next_state[11]   ; 1       ;
+; Total number of inverted registers = 20 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |vga_2|tbird_fsm:tb|unclocked_next_state[21] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |vga_2 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; H_RES          ; 640   ; Signed Integer                               ;
+; V_RES          ; 480   ; Signed Integer                               ;
+; COUNTER_BITS   ; 10    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -273,13 +352,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bit_gen:bits ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; COUNTER_BITS   ; 10    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bit_gen2:bits ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; COUNTER_BITS   ; 10    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tbird_fsm:tb    ;
++----------------+---------------------------+-----------------+
+; Parameter Name ; Value                     ; Type            ;
++----------------+---------------------------+-----------------+
+; L1             ; 1111111110011111111111    ; Unsigned Binary ;
+; L2             ; 1111110000011111111111    ; Unsigned Binary ;
+; L3             ; 1110000000011111111111    ; Unsigned Binary ;
+; L4             ; 1000000000011111111111    ; Unsigned Binary ;
+; L5             ; 0000000000011111111111    ; Unsigned Binary ;
+; R1             ; 1111111111100111111111    ; Unsigned Binary ;
+; R2             ; 1111111111100000111111    ; Unsigned Binary ;
+; R3             ; 1111111111100000000111    ; Unsigned Binary ;
+; R4             ; 1111111111100000000001    ; Unsigned Binary ;
+; R5             ; 1111111111100000000000    ; Unsigned Binary ;
+; H              ; 0000000000000000000000    ; Unsigned Binary ;
+; O              ; 1111111111111111111111    ; Unsigned Binary ;
+; divide_factor  ; 0010011000100101101000000 ; Unsigned Binary ;
++----------------+---------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -288,24 +389,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
-;     CLR               ; 1                           ;
+; arriav_ff             ; 67                          ;
+;     CLR               ; 18                          ;
+;     CLR SCLR          ; 25                          ;
+;     ENA CLR           ; 4                           ;
 ;     ENA CLR SCLR      ; 20                          ;
-; arriav_lcell_comb     ; 46                          ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 20                          ;
-;     normal            ; 26                          ;
+; arriav_lcell_comb     ; 151                         ;
+;     arith             ; 45                          ;
+;         1 data inputs ; 45                          ;
+;     normal            ; 106                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 40                          ;
 ; boundary_port         ; 34                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.99                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -324,10 +427,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 30 20:05:38 2023
+    Info: Processing started: Mon Oct 30 20:59:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file tbird_fsm.v
+    Info (12023): Found entity 1: tbird_fsm File: C:/Data/GIT/VGA/tbird_fsm.v Line: 6
+    Info (12023): Found entity 2: flip_flop File: C:/Data/GIT/VGA/tbird_fsm.v Line: 67
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
     Info (12023): Found entity 1: vga File: C:/Data/GIT/VGA/vga.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_tb.v
@@ -336,6 +442,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file bit_gen
     Info (12023): Found entity 1: bit_gen File: C:/Data/GIT/VGA/bit_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_control.v
     Info (12023): Found entity 1: vga_control File: C:/Data/GIT/VGA/vga_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bit_gen2.v
+    Info (12023): Found entity 1: bit_gen2 File: C:/Data/GIT/VGA/bit_gen2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_2.v
+    Info (12023): Found entity 1: vga_2 File: C:/Data/GIT/VGA/vga_2.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at vga_tb.v(14): created implicit net for "clk_25MHz" File: C:/Data/GIT/VGA/vga_tb.v Line: 14
 Warning (10222): Verilog HDL Parameter Declaration warning at vga_control.v(9): Parameter Declaration in module "vga_control" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/vga_control.v Line: 9
 Warning (10222): Verilog HDL Parameter Declaration warning at vga_control.v(10): Parameter Declaration in module "vga_control" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/vga_control.v Line: 10
@@ -349,8 +459,22 @@ Warning (10222): Verilog HDL Parameter Declaration warning at vga_control.v(19):
 Warning (10222): Verilog HDL Parameter Declaration warning at vga_control.v(20): Parameter Declaration in module "vga_control" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/vga_control.v Line: 20
 Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen.v(7): Parameter Declaration in module "bit_gen" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen.v Line: 7
 Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen.v(8): Parameter Declaration in module "bit_gen" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen.v Line: 8
-Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "vga_control" for hierarchy "vga_control:controller" File: C:/Data/GIT/VGA/vga.v Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(8): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 8
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(9): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 9
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(11): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 11
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(12): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 12
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(13): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 13
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(14): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(15): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(16): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(17): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(18): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(19): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 19
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(20): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 20
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(21): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 21
+Warning (10222): Verilog HDL Parameter Declaration warning at bit_gen2.v(22): Parameter Declaration in module "bit_gen2" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Data/GIT/VGA/bit_gen2.v Line: 22
+Info (12127): Elaborating entity "vga_2" for the top level hierarchy
+Info (12128): Elaborating entity "vga_control" for hierarchy "vga_control:controller" File: C:/Data/GIT/VGA/vga_2.v Line: 26
 Warning (10230): Verilog HDL assignment warning at vga_control.v(40): truncated value with size 32 to match size of target (10) File: C:/Data/GIT/VGA/vga_control.v Line: 40
 Warning (10230): Verilog HDL assignment warning at vga_control.v(42): truncated value with size 32 to match size of target (10) File: C:/Data/GIT/VGA/vga_control.v Line: 42
 Warning (10240): Verilog HDL Always Construct warning at vga_control.v(47): inferring latch(es) for variable "h_bright", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/VGA/vga_control.v Line: 47
@@ -361,26 +485,90 @@ Info (10041): Inferred latch for "v_sync" at vga_control.v(66) File: C:/Data/GIT
 Info (10041): Inferred latch for "v_bright" at vga_control.v(66) File: C:/Data/GIT/VGA/vga_control.v Line: 66
 Info (10041): Inferred latch for "h_sync" at vga_control.v(54) File: C:/Data/GIT/VGA/vga_control.v Line: 54
 Info (10041): Inferred latch for "h_bright" at vga_control.v(54) File: C:/Data/GIT/VGA/vga_control.v Line: 54
-Info (12128): Elaborating entity "bit_gen" for hierarchy "bit_gen:bits" File: C:/Data/GIT/VGA/vga.v Line: 36
+Info (12128): Elaborating entity "bit_gen2" for hierarchy "bit_gen2:bits" File: C:/Data/GIT/VGA/vga_2.v Line: 37
+Warning (10270): Verilog HDL Case Statement warning at bit_gen2.v(34): incomplete case statement has no default case item File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Warning (10240): Verilog HDL Always Construct warning at bit_gen2.v(26): inferring latch(es) for variable "red_out", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/VGA/bit_gen2.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at bit_gen2.v(26): inferring latch(es) for variable "green_out", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/VGA/bit_gen2.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at bit_gen2.v(26): inferring latch(es) for variable "blue_out", which holds its previous value in one or more paths through the always construct File: C:/Data/GIT/VGA/bit_gen2.v Line: 26
+Info (10041): Inferred latch for "blue_out[0]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[1]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[2]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[3]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[4]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[5]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[6]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "blue_out[7]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[0]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[1]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[2]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[3]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[4]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[5]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[6]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "green_out[7]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[0]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[1]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[2]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[3]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[4]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[5]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[6]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (10041): Inferred latch for "red_out[7]" at bit_gen2.v(34) File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+Info (12128): Elaborating entity "tbird_fsm" for hierarchy "tbird_fsm:tb" File: C:/Data/GIT/VGA/vga_2.v Line: 47
+Warning (10230): Verilog HDL assignment warning at tbird_fsm.v(42): truncated value with size 32 to match size of target (25) File: C:/Data/GIT/VGA/tbird_fsm.v Line: 42
+Info (12128): Elaborating entity "flip_flop" for hierarchy "tbird_fsm:tb|flip_flop:ff" File: C:/Data/GIT/VGA/tbird_fsm.v Line: 30
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[7]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[6]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[5]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[4]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[3]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[2]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Info (13026): Duplicate LATCH primitive "bit_gen2:bits|red_out[1]" merged with LATCH primitive "bit_gen2:bits|red_out[0]" File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
 Warning (13012): Latch vga_control:controller|h_sync has unsafe behavior File: C:/Data/GIT/VGA/vga_control.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_control:controller|h_count[9] File: C:/Data/GIT/VGA/vga_control.v Line: 33
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal vga_control:controller|h_count[9] File: C:/Data/GIT/VGA/vga_control.v Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_control:controller|h_count[3] File: C:/Data/GIT/VGA/vga_control.v Line: 33
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal vga_control:controller|h_count[3] File: C:/Data/GIT/VGA/vga_control.v Line: 33
 Warning (13012): Latch vga_control:controller|v_sync has unsafe behavior File: C:/Data/GIT/VGA/vga_control.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_control:controller|v_count[9] File: C:/Data/GIT/VGA/vga_control.v Line: 33
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal vga_control:controller|v_count[9] File: C:/Data/GIT/VGA/vga_control.v Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_control:controller|v_count[6] File: C:/Data/GIT/VGA/vga_control.v Line: 33
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal vga_control:controller|v_count[6] File: C:/Data/GIT/VGA/vga_control.v Line: 33
+Warning (13012): Latch bit_gen2:bits|red_out[0] has unsafe behavior File: C:/Data/GIT/VGA/bit_gen2.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tbird_fsm:tb|flip_flop:ff|q[0] File: C:/Data/GIT/VGA/tbird_fsm.v Line: 75
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Data/GIT/VGA/vga.v Line: 3
+    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 3
+    Warning (13410): Pin "green_out[0]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[1]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[2]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[3]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[4]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[5]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[6]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "green_out[7]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 4
+    Warning (13410): Pin "blue_out[0]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[1]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[2]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[3]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[4]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[5]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[6]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
+    Warning (13410): Pin "blue_out[7]" is stuck at GND File: C:/Data/GIT/VGA/vga_2.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Data/GIT/VGA/output_files/vga.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 194 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 45 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Mon Oct 30 20:05:45 2023
-    Info: Elapsed time: 00:00:07
+    Info (21061): Implemented 160 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon Oct 30 20:59:58 2023
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Data/GIT/VGA/output_files/vga.map.smsg.
 
 

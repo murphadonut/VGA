@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at tbird_fsm.v(32): always construct contains both blocking and non-blocking assignments File: C:/Data/GIT/VGA/tbird_fsm.v Line: 32
+Info (10281): Verilog HDL Declaration information at tbird_fsm.v(17): object "H" differs only in case from object "h" in the same scope File: C:/Data/GIT/VGA/tbird_fsm.v Line: 17
