@@ -45,6 +45,8 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		else clk_25MHz = 1;
 	end
 	
+		//determines when to set hbright high or low so it can only be turned on during certain parts of the screen
+		//sets h_sync to set high or low so it can only be turned on for certain parts of the screen.
 	always @(h_count)
 		begin
 			if(h_count == 0) 
@@ -52,11 +54,12 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 					h_bright = 1;
 					h_sync = 1;
 				end
-			else if (h_count == h_tdisp) h_bright = 0;
+			else if (h_count == h_tdisp) h_bright = 0; 
 			else if (h_count == h_tdisp + h_tfp) h_sync = 0;
 			else if (h_count == h_tdisp + h_tfp + h_tpw) h_sync = 1;
 		end
 		
+		//same as the always block above except for V_bright and v_sync. 
 	always @(v_count)
 		begin
 			if(v_count == 0) 
@@ -66,6 +69,6 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 				end
 			else if (v_count == v_tdisp) v_bright = 0;
 			else if (v_count == v_tdisp + v_tfp) v_sync = 0;
-			else if (v_count == v_tdisp + v_tfp + v_tpw) v_sync = 1;
+			else if (v_count == v_tdisp + v_tfp + v_tpw) v_sync = 1; //set high because it is not active
 		end
 endmodule 
