@@ -24,6 +24,7 @@ module vga_tb();
 			#10;
 		end
 
+		//enough to show the sinals
 	always
 		begin
 			clk_50MHz <= 0; #10;

@@ -36,15 +36,22 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 				begin
 					case (vga_in)
 						// first stage
+						// Left turn signal
 						L1: 
 							begin
-								if(((h_count >= 250) && (h_count <= 300)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 250) && (h_count <= 300)) && ((v_count >= 200) && (v_count <= 240)))			//These steps are to select specific parts of the screen to light up
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
 									end
-								else
+								else if(((h_count >= 250) && (h_count <= 300)) && ((v_count >= 240) && (v_count <= 290)))		//This is just to show how extra things can be added to the display.
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= ON;
+									end
+								else																							//if its neither of those above conditions leave the screen off
 									begin
 										red_out 		= OFF;
 										green_out 	= OFF;
@@ -55,11 +62,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 						// second stage
 						L2: 
 							begin
-								if(((h_count >= 200) && (h_count <= 250)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 200) && (h_count <= 250)) && ((v_count >= 200) && (v_count <= 250)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 200) && (h_count <= 250)) && ((v_count >= 250) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= ON;
 									end
 								else
 									begin
@@ -71,11 +84,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 						// blah blah blah, you get the idea
 						L3: 
 							begin
-								if(((h_count >= 150) && (h_count <= 200)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 150) && (h_count <= 200)) && ((v_count >= 200) && (v_count <= 260)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 150) && (h_count <= 200)) && ((v_count >= 260) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= ON;
 									end
 								else
 									begin
@@ -87,11 +106,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 							
 						L4: 
 							begin
-								if(((h_count >= 100) && (h_count <= 150)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 100) && (h_count <= 150)) && ((v_count >= 200) && (v_count <= 270)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 100) && (h_count <= 150)) && ((v_count >= 270) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= ON;
 									end
 								else
 									begin
@@ -109,6 +134,12 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 										green_out 	= OFF;
 										blue_out	 	= OFF;
 									end
+								else if(((h_count >= 50) && (h_count <= 100)) && ((v_count >= 280) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= ON;
+									end
 								else
 									begin
 										red_out 		= OFF;
@@ -116,14 +147,20 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 										blue_out 	= OFF;
 									end
 							end
-							
+							//Right turn signal
 						R1: 
 							begin
-								if(((h_count >= 340) && (h_count <= 390)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 340) && (h_count <= 390)) && ((v_count >= 200) && (v_count <= 240)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 340) && (h_count <= 390)) && ((v_count >= 240) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
 									end
 								else
 									begin
@@ -135,11 +172,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 							
 						R2: 
 							begin
-								if(((h_count >= 390) && (h_count <= 440)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 390) && (h_count <= 440)) && ((v_count >= 200) && (v_count <= 250)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 390) && (h_count <= 440)) && ((v_count >= 250) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
 									end
 								else
 									begin
@@ -151,11 +194,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 							
 						R3: 
 							begin
-								if(((h_count >= 440) && (h_count <= 490)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 440) && (h_count <= 490)) && ((v_count >= 200) && (v_count <= 260)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 440) && (h_count <= 490)) && ((v_count >= 260) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
 									end
 								else
 									begin
@@ -167,11 +216,17 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 							
 						R4: 
 							begin
-								if(((h_count >= 490) && (h_count <= 540)) && ((v_count >= 200) && (v_count <= 280)))
+								if(((h_count >= 490) && (h_count <= 540)) && ((v_count >= 200) && (v_count <= 270)))
 									begin
 										red_out 		= ON;
 										green_out 	= OFF;
 										blue_out	 	= OFF;
+									end
+								else if(((h_count >= 490) && (h_count <= 540)) && ((v_count >= 270) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
 									end
 								else
 									begin
@@ -189,6 +244,12 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 										green_out 	= OFF;
 										blue_out	 	= OFF;
 									end
+								else if(((h_count >= 540) && (h_count <= 590)) && ((v_count >= 280) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
+									end
 								else
 									begin
 										red_out 		= OFF;
@@ -197,13 +258,28 @@ module bit_gen2 #(parameter COUNTER_BITS = 10)(
 									end
 							end
 							
-						H: 
+						H: //hazard signal
 							begin
-								red_out 		= ON;
-								green_out 	= OFF;
-								blue_out	 	= OFF;
+								if(((h_count >= 50) && (h_count <= 590)) && ((v_count >= 200) && (v_count <= 280)))
+										begin
+											red_out 		= ON;
+											green_out 	= OFF;
+											blue_out	 	= OFF;
+										end
+								else if(((h_count >= 50) && (h_count <= 590)) && ((v_count >= 280) && (v_count <= 290)))
+									begin
+										red_out 		= OFF;
+										green_out 	= ON;
+										blue_out 	= OFF;
+									end
+								else
+									begin
+										red_out 		= OFF;
+										green_out 	= OFF;
+										blue_out 	= OFF;
+									end
 							end
-							
+							//off/ no signal or hazard on
 						O: 
 							begin
 								red_out 		= OFF;

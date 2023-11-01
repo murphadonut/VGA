@@ -22,9 +22,10 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	reg h_bright, v_bright;
 	assign bright = h_bright && v_bright;
 	
+	//Using the push buttons we need to invert the clear logic
 	always @(negedge clear, posedge clk_50MHz)
 	begin
-		if(~clear) 
+		if(~clear) //when we push the clear button reset the lighting
 			begin
 				h_count = 0;
 				v_count = 0;
@@ -33,10 +34,10 @@ module vga_control #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		else if(clk_25MHz)
 			begin
 				clk_25MHz = 0;
-				if (h_count == h_tdisp + h_tfp + h_tpw + h_tbp) 
+				if (h_count == h_tdisp + h_tfp + h_tpw + h_tbp) //if we hit the limit of h_count reset the counter
 					begin 
 						h_count = 0;
-						if (v_count == v_tdisp + v_tfp + v_tpw + v_tbp) v_count = 0;
+						if (v_count == v_tdisp + v_tfp + v_tpw + v_tbp) v_count = 0; // if the vertical count hits its limit reset it to 0 otherwise increment
 						else v_count = v_count + 1;
 					end
 				else h_count = h_count + 1;

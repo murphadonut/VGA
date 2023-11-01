@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Oct 30 21:00:27 2023
+Fitter Status : Successful - Mon Oct 30 22:17:39 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : vga
 Top-level Entity Name : vga_2
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 96 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 129 / 32,070 ( < 1 % )
 Total registers : 73
 Total pins : 34 / 457 ( 7 % )
 Total virtual pins : 0

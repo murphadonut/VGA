@@ -13,9 +13,10 @@ module vga_2 #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 	assign blank_n = bright;
 	
 	// This would be uncommented if I wanted to show the signal on the LEDS to, but then I would have
-	// to assign more pins with the god awful pin planner.
+	// to assign more pins with the awful pin planner.
 	//assign led_out = tbird_out;
 	
+	//controler for the VGA
 	vga_control #(H_RES, V_RES, COUNTER_BITS)
 	controller(
 		.clk_50MHz(clk_50MHz), 
@@ -28,6 +29,7 @@ module vga_2 #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		.v_count(v_count)
 	);
 	
+	//Sets the lights with the T-bird FSM inputs
 	bit_gen2 #(COUNTER_BITS)
 	bits(
 		.bright(bright),
@@ -39,6 +41,7 @@ module vga_2 #(parameter H_RES = 640, V_RES = 480, COUNTER_BITS = 10)(
 		.blue_out(blue_out)
 	);
 	
+	//Run the T-bird fsm to take in the input and output it into the bit-gen2 to run the lights to the VGA output
 	tbird_fsm 
 	tb(
 		.clk(clk_50MHz),

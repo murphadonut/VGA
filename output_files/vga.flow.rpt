@@ -1,5 +1,5 @@
 Flow report for vga
-Mon Oct 30 21:00:38 2023
+Mon Oct 30 22:18:11 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Oct 30 21:00:38 2023       ;
+; Flow Status                     ; Successful - Mon Oct 30 22:18:11 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
 ; Top-level Entity Name           ; vga_2                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 96 / 32,070 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 129 / 32,070 ( < 1 % )                      ;
 ; Total registers                 ; 73                                          ;
 ; Total pins                      ; 34 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/30/2023 20:59:51 ;
+; Start date & time ; 10/30/2023 22:15:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga                 ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 140982220270901.169872119107840        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 259913555675586.169872571104676        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; vga_tb         ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; vga_tb                                 ; --            ; --          ; eda_simulation ;
@@ -106,12 +106,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4833 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:28     ; 1.0                     ; 6584 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4834 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5134 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4719 MB             ; 00:00:00                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4901 MB             ; 00:00:21                           ;
+; Fitter               ; 00:02:05     ; 1.1                     ; 7956 MB             ; 00:03:42                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 4832 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:11     ; 1.6                     ; 5284 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
+; Total                ; 00:02:53     ; --                      ; --                  ; 00:04:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,11 +120,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Ploptop          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Mikes-Computer   ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
